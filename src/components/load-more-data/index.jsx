@@ -1,15 +1,11 @@
 import { useEffect, useState } from "react";
 import "./style.css";
-import StarRating from "../star-rating"; // Adjusted relative import path
-// Adjust the import path
-// Import StarRating component
 
 export default function LoadMoreData() {
   const [loading, setLoading] = useState(false);
   const [products, setProducts] = useState([]);
   const [count, setCount] = useState(0);
   const [disableButton, setDisableButton] = useState(false);
-  const [selectedProduct, setSelectedProduct] = useState(null); // New state to track selected product
 
   async function fetchProducts() {
     try {
@@ -43,7 +39,7 @@ export default function LoadMoreData() {
   }, [products]);
 
   if (loading) {
-    return <div>Loading data! Please wait.</div>;
+    return <div>Loading data ! Please wait.</div>;
   }
 
   return (
@@ -51,27 +47,18 @@ export default function LoadMoreData() {
       <div className="product-container">
         {products && products.length
           ? products.map((item) => (
-              <div
-                className="product"
-                key={item.id}
-                onClick={() => setSelectedProduct(item.id)} // Set selected product on click
-              >
+              <div className="product" key={item.id}>
                 <img src={item.thumbnail} alt={item.title} />
                 <p>{item.title}</p>
               </div>
             ))
           : null}
       </div>
-      {selectedProduct && ( // Show StarRating component if a product is selected
-        <div className="rating-container">
-          <StarRating noOfStars={5} />
-        </div>
-      )}
       <div className="button-container">
         <button disabled={disableButton} onClick={() => setCount(count + 1)}>
           Load More Products
         </button>
-        {disableButton ? <p>You have reached 100 products</p> : null}
+        {disableButton ? <p>You have reached to 100 products</p> : null}
       </div>
     </div>
   );

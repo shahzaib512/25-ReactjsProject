@@ -1,0 +1,33 @@
+.tree-view-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    background: rgb(0, 71, 110);
+  }
+
+  .tree-view-container h1 {
+    color: rgb(240, 240, 7);
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .tree-view-container p {
+    color: antiquewhite;
+    text-align: center;
+  }
+
+  .menu-item{
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      cursor: pointer;
+      color: #fff;
+  }
+  
+  .menu-list-container {
+      list-style: none;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      gap: 10px;
+  }
