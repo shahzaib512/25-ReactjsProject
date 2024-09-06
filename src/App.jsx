@@ -9,6 +9,13 @@ import QRCodeGenerator from './components/qr-code-generator';
 import LightDarkMode from './components/light-dark-mode';
 import ScrollIndicator from './components/scroll-indicator';
 import './App.css'; // ✅ Correct
+import TabTest from './components/custom-tabs/tab-test';
+import ModalTest from './components/custom-model-popup/modal-test';
+import GithubProfileFinder from './components/github-profile-finder';
+import SearchAutocomplete from './components/search-auto-complete-with-api';
+import FeatureFlagGlobalState from './components/feature-flag/context';
+import FeatureFlags from './components/feature-flag';
+import TicTacToe from './components/tic-tact-toe';
 
 
 function App(){
@@ -45,6 +52,26 @@ function App(){
 
       {/* Scroll indicator components */}
       <ScrollIndicator url={"https://dummyjson.com/products?limit=100"} />
+
+      {/* Random Tabs Component */}
+      <TabTest />
+
+      {/* Custom Model Popup */}
+      <ModalTest />
+
+      {/* Github profile finder */}
+      <GithubProfileFinder />
+
+      {/* Auto search and complete */}
+      {/* <SearchAutocomplete /> */}
+
+      {/* Tic tak toe */}
+      <TicTacToe />
+
+      {/* feature flag component */}
+      <FeatureFlagGlobalState>
+        <FeatureFlags />
+      </FeatureFlagGlobalState>
 
     </div>
   );
