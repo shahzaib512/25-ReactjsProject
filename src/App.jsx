@@ -16,6 +16,7 @@ import SearchAutocomplete from './components/search-auto-complete-with-api';
 import FeatureFlagGlobalState from './components/feature-flag/context';
 import FeatureFlags from './components/feature-flag';
 import TicTacToe from './components/tic-tact-toe';
+import Weather from './components/weather-data/weather';
 
 
 function App(){
@@ -69,9 +70,12 @@ function App(){
       <TicTacToe />
 
       {/* feature flag component */}
-      <FeatureFlagGlobalState>
+      {/* <FeatureFlagGlobalState>
         <FeatureFlags />
-      </FeatureFlagGlobalState>
+      </FeatureFlagGlobalState> */}
+
+      {/* Weather app */}
+      <Weather />
 
     </div>
   );
