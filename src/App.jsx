@@ -17,6 +17,8 @@ import FeatureFlagGlobalState from './components/feature-flag/context';
 import FeatureFlags from './components/feature-flag';
 import TicTacToe from './components/tic-tact-toe';
 import Weather from './components/weather-data/weather';
+import Pagination from './components/pagination';
+import PaginationTest from './components/pagination/test';
 
 
 function App(){
@@ -52,7 +54,7 @@ function App(){
       <LightDarkMode />
 
       {/* Scroll indicator components */}
-      <ScrollIndicator url={"https://dummyjson.com/products?limit=100"} />
+      <ScrollIndicator url={"https://dummyjson.com/products?limit=3"} />
 
       {/* Random Tabs Component */}
       <TabTest />
@@ -76,6 +78,8 @@ function App(){
 
       {/* Weather app */}
       <Weather />
+
+      <PaginationTest />
 
     </div>
   );
